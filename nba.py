@@ -25,9 +25,9 @@ df = career.get_data_frames()
 df[0]['ppg'] = df[0]['PTS']/df[0]['GP']
 df[0]['rpg'] = df[0]['REB']/df[0]['GP']
 df[0]['apg'] = df[0]['AST']/df[0]['GP']
-print(df[0]['ppg'])
-print(df[0]['rpg'])
-print(df[0]['apg'])
+# print(df[0]['ppg'])
+# print(df[0]['rpg'])
+# print(df[0]['apg'])
 
 
 
@@ -40,21 +40,28 @@ x = input()
 
 nameAndYear = x.split(" ")
 
-print(nameAndYear)
+# print(nameAndYear)
 
 name = " ".join(nameAndYear[0:2])
 
-print(name)
+##print(name)
 
 year = nameAndYear[2]
 
-print(year)
-###     After we get a name and year, we want to get the player_id for that specific name
+##print(year)
+##     After we get a name and year, we want to get the player_id for that specific name
 
 
 
 
 ####        Name and year ------> player ID
+
+# x = players.find_players_by_full_name('lebron james')
+
+xTest = players.find_players_by_full_name(name)
+
+# print(x[0].get("id"))
+print(xTest[0].get("id"))
 
 
 
