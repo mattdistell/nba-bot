@@ -3,7 +3,7 @@ import praw
 
 
 r = praw.Reddit('bot1')
-subreddit = r.subreddit("nba")
+subreddit = r.subreddit("nbadiscussion")
 
 
 
@@ -16,13 +16,14 @@ subreddit = r.subreddit("nba")
 
 from praw.models import MoreComments
 
-url = "https://www.reddit.com/r/nbadiscussion/comments/11x1rmo/can_a_below_average_center_still_get_meaningful/"
+url = "https://www.reddit.com/r/testingzz___zzzz_z/comments/11zx8ij/testtesttest/"
 
 submission = r.submission(url = url)
 
 submission.comments.replace_more(limit=None)
-for comment in submission.comments.list():
-    print(comment.body)
-    print("\n")
+# for comment in submission.comments.list():
+#     print(comment.body)
+#     print("\n")
 
 
+submission.reply("test comment pt 2.")
