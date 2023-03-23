@@ -16,14 +16,22 @@ subreddit = r.subreddit("nbadiscussion")
 
 from praw.models import MoreComments
 
+identifer = "!nbastat"
+
+containsIdentifier= False
+
 url = "https://www.reddit.com/r/testingzz___zzzz_z/comments/11zx8ij/testtesttest/"
 
 submission = r.submission(url = url)
 
 submission.comments.replace_more(limit=None)
-# for comment in submission.comments.list():
-#     print(comment.body)
-#     print("\n")
+for comment in submission.comments.list():
+    print(comment.body)
+    print("\n")
+    if identifer in comment.body:
+        containsIdentifier = True
+
+print(containsIdentifier)
 
 
-submission.reply("test comment pt 2.")
+
