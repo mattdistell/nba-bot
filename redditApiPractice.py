@@ -47,6 +47,7 @@ for comment in submission.comments.list():
         print(commentArray)
         print(name)
         xTest = players.find_players_by_full_name(name)
+        # print(xTest)
         playerId = xTest[0].get("id")
         print(playerId)
         career = PlayerProfileV2(player_id=playerId)
