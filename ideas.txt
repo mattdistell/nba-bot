@@ -1,0 +1,9 @@
+Just keeping a log of some ideas for the bot here:
+
+somebody could type in a player and mvp? If the player won mvp:
+    List all the years they won and the stats of those yearrs
+if they did not win mvp:
+    say they didn't win mvp
+
+
+maybe add total award accomplishments as a command

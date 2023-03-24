@@ -49,7 +49,7 @@ name = " ".join(nameAndYear[0:2])
 
 seasonId = [nameAndYear[2]]
 
-print(seasonId)
+# print(seasonId)
 
 ##print(name)
 
@@ -68,7 +68,7 @@ year = nameAndYear[2]
 xTest = players.find_players_by_full_name(name)
 
 # print(x[0].get("id"))
-print(xTest[0].get("id"))
+# print(xTest[0].get("id"))
 
 inputID = xTest[0].get("id")
 
@@ -76,20 +76,20 @@ inputID = xTest[0].get("id")
 inputCareer = PlayerProfileV2(player_id=inputID) 
 inputDF = inputCareer.get_data_frames()
 
-print(type(inputDF[0].dtypes))
+# print(type(inputDF[0].dtypes))
 
 input_DF_regular_season = inputDF[0]
 
-print(input_DF_regular_season)
+# print(input_DF_regular_season)
 
 input_DF_regular_season['SEASON_ID'] = input_DF_regular_season['SEASON_ID'].astype(pandas.StringDtype())
 
 
-print(input_DF_regular_season.dtypes)
-print(seasonId)
+# print(input_DF_regular_season.dtypes)
+# print(seasonId)
 
 dfByYear = input_DF_regular_season[input_DF_regular_season['SEASON_ID'].str.contains(seasonId[0])]
-print(dfByYear)
+# print(dfByYear)
 
 # print(dfByYear)
 
